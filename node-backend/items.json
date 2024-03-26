@@ -1,0 +1,561 @@
+{
+  "items": [
+    {
+      "id": "001",
+      "image": "images/1.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Traditional Handcrafted Wooden Vase",
+      "original_price": 1349,
+      "current_price": 849,
+      "discount_percentage": 37,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.5,
+        "count": 1400
+      }
+    },
+    {
+      "id": "002",
+      "image": "images/2.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handwoven Woolen Shawl with Ethnic Patterns",
+      "original_price": 1999,
+      "current_price": 1199,
+      "discount_percentage": 40,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 24
+      }
+    },
+    {
+      "id": "003",
+      "image": "images/3.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Antique Brass Decorative Lantern",
+      "original_price": 2299,
+      "current_price": 1399,
+      "discount_percentage": 39,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.1,
+        "count": 249
+      }
+    },
+    {
+      "id": "004",
+      "image": "images/4.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-painted Ceramic Serving Bowl Set",
+      "original_price": 1899,
+      "current_price": 999,
+      "discount_percentage": 47,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 5,
+        "count": 10
+      }
+    },
+    {
+      "id": "005",
+      "image": "images/5.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Bamboo Handcrafted Decorative Wall Clock",
+      "original_price": 1799,
+      "current_price": 1099,
+      "discount_percentage": 39,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.2,
+        "count": 3500
+      }
+    },
+    {
+      "id": "006",
+      "image": "images/6.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-carved Sandalwood Incense Holder",
+      "original_price": 1495,
+      "current_price": 895,
+      "discount_percentage": 40,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.7,
+        "count": 132
+      }
+    },
+    {
+      "id": "007",
+      "image": "images/7.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Embossed Copper Water Jug",
+      "original_price": 1299,
+      "current_price": 799,
+      "discount_percentage": 38,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 760
+      }
+    },
+    {
+      "id": "008",
+      "image": "images/8.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handwoven Jute Table Runner",
+      "original_price": 599,
+      "current_price": 399,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.4,
+        "count": 980
+      }
+    },
+    {
+      "id": "009",
+      "image": "images/9.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Rajasthani Hand-painted Decorative Elephant",
+      "original_price": 1699,
+      "current_price": 1099,
+      "discount_percentage": 35,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.8,
+        "count": 290
+      }
+    },
+    {
+      "id": "010",
+      "image": "images/10.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Tribal Handcrafted Bamboo Wind Chime",
+      "original_price": 899,
+      "current_price": 599,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 80
+      }
+    },
+    {
+      "id": "011",
+      "image": "images/11.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Traditional Hand-painted Terracotta Pot",
+      "original_price": 1199,
+      "current_price": 799,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.5,
+        "count": 420
+      }
+    },
+    {
+      "id": "012",
+      "image": "images/12.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handmade Brass Dhokra Tribal Figurine",
+      "original_price": 2499,
+      "current_price": 1599,
+      "discount_percentage": 36,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.2,
+        "count": 180
+      }
+    },
+    {
+      "id": "013",
+      "image": "images/13.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Mughal Handcrafted Miniature Painting Set",
+      "original_price": 1499,
+      "current_price": 999,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.7,
+        "count": 320
+      }
+    },
+    {
+      "id": "014",
+      "image": "images/14.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handcrafted Teak Wood Serving Tray",
+      "original_price": 1799,
+      "current_price": 1199,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 480
+      }
+    },
+   
+    {
+      "id": "015",
+      "image": "images/15.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-painted Wooden Jewelry Box",
+      "original_price": 999,
+      "current_price": 699,
+      "discount_percentage": 30,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.4,
+        "count": 620
+      }
+    },
+    {
+      "id": "016",
+      "image": "images/16.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Ethnic Hand-embroidered Cushion Cover Set",
+      "original_price": 799,
+      "current_price": 499,
+      "discount_percentage": 38,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.2,
+        "count": 540
+      }
+    },
+    {
+      "id": "017",
+      "image": "images/17.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Tribal Hand-painted Decorative Mask",
+      "original_price": 1099,
+      "current_price": 799,
+      "discount_percentage": 27,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 380
+      }
+    },
+    {
+      "id": "018",
+      "image": "images/18.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handmade Ceramic Tea Light Holder Set",
+      "original_price": 899,
+      "current_price": 599,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 270
+      }
+    },
+    {
+      "id": "019",
+      "image": "images/19.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Traditional Hand-painted Wooden Key Holder",
+      "original_price": 699,
+      "current_price": 399,
+      "discount_percentage": 43,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.8,
+        "count": 460
+      }
+    },
+    {
+      "id": "020",
+      "image": "images/20.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Brass Antique Finish Decorative Bird Cage",
+      "original_price": 1499,
+      "current_price": 999,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.5,
+        "count": 310
+      }
+    },
+    {
+      "id": "021",
+      "image": "images/21.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Rajasthani Hand-painted Marble Coaster Set",
+      "original_price": 799,
+      "current_price": 499,
+      "discount_percentage": 38,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.7,
+        "count": 560
+      }
+    },
+    {
+      "id": "022",
+      "image": "images/22.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Tribal Hand-carved Wooden Wall Panel",
+      "original_price": 1899,
+      "current_price": 1299,
+      "discount_percentage": 32,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 170
+      }
+    },
+    {
+      "id": "023",
+      "image": "images/23.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-painted Madhubani Design Dupatta",
+      "original_price": 1499,
+      "current_price": 999,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 290
+      }
+    },
+    {
+      "id": "024",
+      "image": "images/24.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Ethnic Handwoven Cotton Table Mats Set",
+      "original_price": 699,
+      "current_price": 399,
+      "discount_percentage": 43,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.2,
+        "count": 380
+      }
+    },
+    {
+      "id": "025",
+      "image": "images/25.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Traditional Hand-painted Wooden Wall Clock",
+      "original_price": 1299,
+      "current_price": 899,
+      "discount_percentage": 31,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.8,
+        "count": 510
+      }
+    },
+    {  
+      "id": "026",
+      "image": "images/26.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handcrafted Bamboo Wind Chime",
+      "original_price": 999,
+      "current_price": 599,
+      "discount_percentage": 40,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.4,
+        "count": 720
+      }
+    },
+    {
+      "id": "027",
+      "image": "images/27.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Terracotta Hand-painted Decorative Wall Hanging",
+      "original_price": 1199,
+      "current_price": 799,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.5,
+        "count": 620
+      }
+    },
+    {
+      "id": "028",
+      "image": "images/28.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-painted Ceramic Flower Vase",
+      "original_price": 899,
+      "current_price": 599,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 550
+      }
+    },
+    {
+      "id": "029",
+      "image": "images/29.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Kutch Hand-embroidered Wall Hanging Tapestry",
+      "original_price": 1299,
+      "current_price": 899,
+      "discount_percentage": 31,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.7,
+        "count": 380
+      }
+    },
+    {
+      "id": "030",
+      "image": "images/30.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handmade Leather Journal with Embossed Cover",
+      "original_price": 799,
+      "current_price": 499,
+      "discount_percentage": 38,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 420
+      }
+    },
+    
+    {
+      "id": "031",
+      "image": "images/31.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Tribal Hand-painted Terracotta Coaster Set",
+      "original_price": 599,
+      "current_price": 399,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.2,
+        "count": 370
+      }
+    },
+    {
+      "id": "032",
+      "image": "images/32.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Ethnic Handcrafted Warli Design Lampshade",
+      "original_price": 1499,
+      "current_price": 999,
+      "discount_percentage": 33,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.8,
+        "count": 280
+      }
+    },
+    {
+      "id": "033",
+      "image": "images/33.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Hand-painted Kalamkari Design Potli Bag",
+      "original_price": 999,
+      "current_price": 699,
+      "discount_percentage": 30,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.3,
+        "count": 420
+      }
+    },
+    {
+      "id": "034",
+      "image": "images/34.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Handwoven Kutchi Embroidered Clutch",
+      "original_price": 1099,
+      "current_price": 799,
+      "discount_percentage": 27,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.7,
+        "count": 370
+      }
+    },
+    {
+      "id": "035",
+      "image": "images/35.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Traditional Hand-painted Kettle",
+      "original_price": 1299,
+      "current_price": 899,
+      "discount_percentage": 31,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.5,
+        "count": 590
+      }
+    },
+    {
+      "id": "036",
+      "image": "images/36.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Ethnic Handwoven Banarasi Silk Stole",
+      "original_price": 1599,
+      "current_price": 1099,
+      "discount_percentage": 31,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.6,
+        "count": 430
+      }
+    },
+    {
+      "id": "037",
+      "image": "images/37.jpg",
+      "company": "Kumaoni Gifts/Artifacts/Showpieces",
+      "item_name": "Tribal Hand-carved Wooden Earrings",
+      "original_price": 799,
+      "current_price": 499,
+      "discount_percentage": 38,
+      "return_period": 14,
+      "delivery_date": "10 Oct 2023",
+      "rating": {
+        "stars": 4.4,
+        "count": 320
+      }
+    }
+  ]
+}
