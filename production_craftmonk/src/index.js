@@ -7,6 +7,8 @@ import Home from './routes/Home';
 import ShoppingBag from './routes/ShoppingBag';
 import Login from './routes/Login';
 import App from './App';
+import { Provider } from 'react-redux';
+import craftmonkStore from './store/indexmain';
 
 
 
@@ -24,7 +26,9 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  <Provider store={craftmonkStore}>
     <RouterProvider router={router} />
+    </Provider>
 );
 
 // If you want to start measuring performance in your app, pass a function
