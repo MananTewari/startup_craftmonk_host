@@ -56,7 +56,7 @@ function checkClick(){
           <Link className="action_container" to="/ShoppingBag" onClick={checkClick}>
             <IoBag />
             <span className="action_name">Bag</span>
-            <span className="bag-item-count">1</span>
+            <span className="bag-item-count">2</span>
             </Link>
           </div>
           </header>

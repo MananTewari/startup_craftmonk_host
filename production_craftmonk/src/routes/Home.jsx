@@ -1,28 +1,29 @@
-
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Banners from "../Components/Banners";
 import ItemsCreater from "../Components/createItems";
-import { useSelector } from "react-redux";
+
+
 
 function Home() {
-    const items = useSelector((store) => store.items); // Selecting 'items' from the store
-console.log(items);
 
-const itemsArray = Object.values(items);
-console.log(itemsArray);
-return (
-  <main>
-    <div>
-    
-    <Banners/>
-      <div className="items-container">
-        {itemsArray.map((item) => (
-          <ItemsCreater key={item.key} item={item} />
-        ))}
+  const items = useSelector((store) => store.items);
+  console.log("Home", items);
+  console.log("home", typeof(items));
+  const itemsArray=Object.values(items);
+
+  return (
+    <main>
+      <div>
+        <Banners />
+        <div className="items-container">
+          {itemsArray.map((item) => (
+            <ItemsCreater key={item.key} item={item} />
+          ))}
+        </div>
       </div>
-    </div>
-  </main>
-);
-
+    </main>
+  );
 }
 
 export default Home;

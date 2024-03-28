@@ -19,6 +19,6 @@ const fetchStatusSlice = createSlice({
   },
 });
 
-export const { markFetchDone, markFetchingStarted, markFetchingFinished } = fetchStatusSlice.actions;
+export const FetchStatusAction = fetchStatusSlice.actions;
 
-export default fetchStatusSlice.reducer;
+export default fetchStatusSlice;

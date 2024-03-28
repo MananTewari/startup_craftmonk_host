@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { bagSliceActions } from "../store/bagSlice"; // Assuming you've exported only actions from bagSlice
 
 function ItemsCreater({ item }) {
+  console.log("items in creator:", item)
   const dispatch = useDispatch();
   const bagItems = useSelector(store => store.bag);
   const elementFound = bagItems.indexOf(item.id) >= 0;
@@ -14,7 +15,7 @@ function ItemsCreater({ item }) {
   const handleBagRemove = () => {
     dispatch(bagSliceActions.deleteFromBag(item.id));
   };
-
+console.log("chcek", item.current_price);
   return (
     <div>
       <div className="item-container">
