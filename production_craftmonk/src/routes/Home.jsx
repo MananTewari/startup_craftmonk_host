@@ -1,28 +1,29 @@
-import React, { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+import { useSelector } from "react-redux";
 import Banners from "../Components/Banners";
 import ItemsCreater from "../Components/createItems";
-
-
+import Login from "./Login";
 
 function Home() {
-
+  // Get the authentication state from Redux store
+  const isAuthenticated = useSelector((store) => store.auth.isAuthenticated);
+  // Assuming you also have 'items' in your Redux store
   const items = useSelector((store) => store.items);
-  console.log("Home", items);
-  console.log("home", typeof(items));
-  const itemsArray=Object.values(items);
 
-  return (
+  // Render Home component if user is authenticated, otherwise render Login component
+  return isAuthenticated ? (
     <main>
       <div>
         <Banners />
         <div className="items-container">
-          {itemsArray.map((item) => (
+          {Object.values(items).map((item) => (
             <ItemsCreater key={item.key} item={item} />
           ))}
         </div>
       </div>
     </main>
+  ) : (
+    <Login />
   );
 }
 

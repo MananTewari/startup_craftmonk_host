@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 
-const imageArray = [
+const imageArray_1= [
  "https://img.freepik.com/free-vector/super-black-friday-sale-banner-with-red-brush-stroke_1361-3072.jpg?w=900&t=st=1711518339~exp=1711518939~hmac=3b0f55aed9638a2a57d5dcead1bdf3e2d28a58da0c740449ffb146531ad88b8f",
 "https://www.shutterstock.com/shutterstock/photos/513851872/display_1500/stock-vector-sale-poster-of-black-friday-513851872.jpg",
 ];
@@ -13,7 +13,7 @@ function Banners() {
   }, [nextImage]);
   const [activeImage, handleactiveImage] = useState(0);
   function nextImage() {
-    if (activeImage === imageArray.length-1) {
+    if (activeImage === imageArray_1.length-1) {
       handleactiveImage(0);
       return;
     }
@@ -21,7 +21,7 @@ function Banners() {
     console.log(activeImage);
   }
   function prevImage() {
-    if (activeImage === imageArray.length - 1) {
+    if (activeImage === imageArray_1.length - 1) {
       handleactiveImage(0);
       return;
     }
@@ -54,7 +54,7 @@ function Banners() {
         </div>
         <div class="carousel-inner">
           <div className="bannerCreater">
-            <img className="bannerImages" src={imageArray[activeImage]} />
+            <img className="bannerImages" src={imageArray_1[activeImage]} />
           </div>
         </div>
       </div>

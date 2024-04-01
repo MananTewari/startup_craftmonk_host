@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 import { CiSearch } from "react-icons/ci";
 
 function Header() {
-
+const bag=useSelector(store=>store.bag)
 function checkClick(){
   console.log("clicked");
 }
@@ -56,7 +56,7 @@ function checkClick(){
           <Link className="action_container" to="/ShoppingBag" onClick={checkClick}>
             <IoBag />
             <span className="action_name">Bag</span>
-            <span className="bag-item-count">2</span>
+            <span className="bag-item-count">{bag.length}</span>
             </Link>
           </div>
           </header>
