@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import Banners from "../Components/Banners";
 import ItemsCreater from "../Components/createItems";
 import Login from "./Login";
+import SortingTable from "../Components/SoringTable";
 
 function Home() {
   // Get the authentication state from Redux store
@@ -15,6 +16,7 @@ function Home() {
     <main>
       <div>
         <Banners />
+        <SortingTable/>
         <div className="items-container">
           {Object.values(items).map((item) => (
             <ItemsCreater key={item.key} item={item} />
