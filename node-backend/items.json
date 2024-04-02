@@ -348,15 +348,15 @@
     {
       "id": "024",
       "image": "images/image (24).jpg",
-      "company": "Kumaoni Gifts/Artifacts/Showpieces",
-      "item_name": "Hand-painted Ceramic Tea Coaster Set",
-      "original_price": 499,
-      "current_price": 299,
+      "company": "Haaland Scotch",
+      "item_name": " Seedha Shantipuri se",
+      "original_price": "2000",
+      "current_price":"400" ,
       "discount_percentage": 40,
       "return_period": 14,
-      "delivery_date": "10 Oct 2023",
+      "delivery_date": "INSTANT",
       "rating": {
-        "stars": 4.4,
+        "stars": 4.9,
         "count": 410
       }
     },

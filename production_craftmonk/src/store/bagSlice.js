@@ -15,6 +15,7 @@ const bagSlice = createSlice({
       // Array.splice(itemId, 1);
       // console.log(itemId);
     },
+   
   }
 });
 export const bagSliceActions = bagSlice.actions;

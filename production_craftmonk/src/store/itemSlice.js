@@ -7,6 +7,10 @@ const itemSlice = createSlice({
       return action.payload; // Concatenate the new items with the existing state
  
     },
+    sortItemsByPrice:(state, action)=>{
+      state.sort((a,b)=>a.current_price-b.current_price);
+    
+    }
   },
 });
 
