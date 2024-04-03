@@ -1,6 +1,8 @@
 function SortingLogic() {
    
-    function handleLowToHigh(){}
+    function handleLowToHigh(){
+        
+    }
     function handleHighToLow(){}
 }
 
