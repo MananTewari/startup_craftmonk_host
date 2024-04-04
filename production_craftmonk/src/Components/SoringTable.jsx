@@ -11,10 +11,15 @@ function SortingTable() {
     setDropdownOpen(!dropdownOpen);
   };
 
-  const handleSort = () => {
-    dispatch(itemAction.sortItemsByPrice());
-    console.log("sort called");
+  const handleLowSort = () => {
+    dispatch(itemAction.sortItemsByLowPrice());
+    console.log("sort low called");
   };
+  const handleHighSort=()=>{
+    dispatch(itemAction.sortItemsByHighPrice());
+    console.log("sort high called");
+  };
+
 
   return (
     <div className="dropdown">
@@ -24,12 +29,17 @@ function SortingTable() {
         onClick={toggleDropdown}
         aria-expanded={dropdownOpen ? 'true' : 'false'}
       >
-        Sort By: Price(High To Low)
+        Sort By: Price
       </button>
       <ul className={`dropdown-menu ${dropdownOpen ? 'show' : ''}`}>
         <li>
-          <a className="dropdown-item" href="#" onClick={handleSort}>
+          <a className="dropdown-item" href="#" onClick={handleLowSort}>
             Low to High
+          </a>
+        </li>
+        <li>
+          <a className="dropdown-item" href="#" onClick={handleHighSort}>
+           High to Low
           </a>
         </li>
       </ul>
