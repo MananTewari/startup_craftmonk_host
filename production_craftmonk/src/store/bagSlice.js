@@ -15,6 +15,9 @@ const bagSlice = createSlice({
       // Array.splice(itemId, 1);
       // console.log(itemId);
     },
+    clearCart:(state)=>{
+      return[];
+    }
    
   }
 });
