@@ -4,6 +4,7 @@ import Banners from "../Components/Banners";
 import ItemsCreater from "../Components/createItems";
 import Login from "./Login";
 import SortingTable from "../Components/SoringTable";
+import SlideCard from "../Components/Scard";
 
 function Home() {
   // Get the authentication state from Redux store
@@ -15,7 +16,7 @@ function Home() {
   return isAuthenticated ? (
     <main>
       <div>
-        <Banners />
+        <SlideCard/>
         <SortingTable/>
         <div className="items-container">
           {Object.values(items).map((item) => (
