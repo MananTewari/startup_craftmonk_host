@@ -27,15 +27,15 @@ function BagItems({ item }) {
               ({item.discount_percentage}% OFF)
             </span>
           </div>
-          <div className="return-period">
-            <span className="return-period-days">
+          <div className= "return-period">
+            <span className= "return-period-days">
               {item.return_period} days
             </span>{" "}
             return available
           </div>
-          <div className="delivery-details">
+          <div className= "delivery-details">
             Delivery by{" "}
-            <span className="delivery-details-days">{item.delivery_date}</span>
+            <span className= "delivery-details-days">{item.delivery_date}</span>
           </div>
         </div>
 
