@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-const [orderPlaced, setOrderPlaced]=useState(false);_
+
 
 
 const bagSlice = createSlice({
@@ -22,11 +22,7 @@ const bagSlice = createSlice({
     orderCalculator: (state) => {
       //to reduce the avaiable items from backend
 
-    },
-    placeOrder: (state, action)=> {
-    setOrderPlaced(!orderPlaced)      
-
-}
+    }, 
     }
    
   }

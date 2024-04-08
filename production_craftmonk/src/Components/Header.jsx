@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { CiSearch } from "react-icons/ci";
 
+
 function Header() {
 const bag=useSelector(store=>store.bag)
 function checkClick(){
@@ -14,6 +15,7 @@ function checkClick(){
 
   return (
     <div>
+      
       <header>
         <div className="logo_container">
           <Link to="/">

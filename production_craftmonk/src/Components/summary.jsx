@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
-import { useState } from "react"; // Importing useState correctly
+import { useState } from "react";
 import Checkout from "./Checkout";
 import useDispatch from "react-redux";
+import { Link } from "react-router-dom";
 
 const BagSummary = () => {
-  const dispatch = useDispatch();
+  
   const bagItemIds = useSelector((state) => state.bag);
   const items = useSelector((state) => state.items);
   const finalItems = items.filter((item) => bagItemIds.includes(item.id));
@@ -24,7 +25,7 @@ const BagSummary = () => {
   function placeOrder() {
     console.log("place order clicked");
     setOrderPlaced(true);
-   
+  
 
   }
 
@@ -33,7 +34,7 @@ const BagSummary = () => {
   return (
     <>
       {orderPlaced ? (
-        <Checkout totalItem={totalItem} totalMRP={totalMRP} item={items.item_name} totalDiscount={totalDiscount}/>
+        <Checkout totalItem={totalItem} totalDiscount={totalDiscount} totalMRP={totalMRP}/>
       ) : (
         <div className="bag-summary">
           <div className="bag-details-container">
@@ -56,9 +57,11 @@ const BagSummary = () => {
               <span className="price-item-value">₹{finalPayment}</span>
             </div>
           </div>
+  <Link to="/Checkout">
           <button className="btn-add-bag" onClick={placeOrder}>
             PLACE ORDER
           </button>
+          </Link>
         </div>
       )}
     </>
