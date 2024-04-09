@@ -49,11 +49,7 @@ function checkClick(){
             <span className="action_name" >Profile</span>
           </div>
           </Link>
-          
-          <div className="action_container">
-            <PiSmileyWinkFill />
-            <span className="action_name">Wishlist</span>
-          </div>
+        
 
           <Link className="action_container" to="/ShoppingBag" onClick={checkClick}>
             <IoBag />

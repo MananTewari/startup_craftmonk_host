@@ -5,6 +5,8 @@ import ItemsCreater from "../Components/createItems";
 import Login from "./Login";
 import SortingTable from "../Components/SoringTable";
 import SlideCard from "../Components/Slider";
+import ItemCarousel from "../Components/itemsCarousel";
+import Uttarakhand from "../Components/Uttarakhand";
 
 function Home() {
   // Get the authentication state from Redux store
@@ -17,6 +19,8 @@ function Home() {
     <main>
       <div>
         <SlideCard/>
+        <ItemCarousel/>
+        <Uttarakhand/>
         <SortingTable/>
         <div className="items-container">
           {Object.values(items).map((item) => (

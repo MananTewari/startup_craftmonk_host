@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.item-image {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    padding: 10px;
+    padding-top:0; /* Add padding as needed */
+    object-fit: cover;
+    margin-top:120px; /* Ensure images cover the entire container */
+}
+.hills{
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+    padding:10px;
+}
+

@@ -1,11 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { bagSliceActions } from "../store/bagSlice"; // Assuming you've exported only actions from bagSlice
+import { bagSliceActions } from "../store/bagSlice";
 
 function ItemsCreater({ item }) {
-  console.log("items in creator:", item)
   const dispatch = useDispatch();
-  const bagItems = useSelector(store => store.bag);
+  const bagItems = useSelector((store) => store.bag);
   const elementFound = bagItems.indexOf(item.id) >= 0;
 
   const handleBagSubmit = () => {
@@ -15,27 +14,31 @@ function ItemsCreater({ item }) {
   const handleBagRemove = () => {
     dispatch(bagSliceActions.deleteFromBag(item.id));
   };
-console.log("chcek", item.current_price);
+
   return (
-    <div>
-      <div className="item-container">
-        <img className="item-image" src={item.image} alt="item image" />
-        <div className="company-name">{item.company}</div>
-        <div className="item-name">{item.item_name}</div>
-        <div className="price">
-          <span className="current-price">Rs {item.current_price}</span>
-          <span className="original-price">Rs {item.original_price}</span>
-          <span className="discount">({item.discount_percentage}% OFF)</span>
+    <div className="col-md-3 col-sm-6 mb-4"> {/* Add mb-4 for bottom margin */}
+      <div className="card h-100">
+        <img src={item.image} className="card-img-top" alt="item image" />
+        <div className="card-body">
+          <h5 className="card-title">{item.item_name}</h5>
+          <p className="card-text">{item.company}</p>
+          <p className="card-text">
+            <span className="current-price">Rs {item.current_price}</span>
+            <span className="original-price">Rs {item.original_price}</span>
+            <span className="discount">({item.discount_percentage}% OFF)</span>
+          </p>
         </div>
-        {elementFound ? (
-          <button className="btn-red" onClick={handleBagRemove}>
-            Delete From Bag
-          </button>
-        ) : (
-          <button className="btn-green" onClick={handleBagSubmit}>
-            Buy Now
-          </button>
-        )}
+        <div className="card-footer">
+          {elementFound ? (
+            <button className="btn btn-danger" onClick={handleBagRemove}>
+              Delete From Bag
+            </button>
+          ) : (
+            <button className="btn btn-success" onClick={handleBagSubmit}>
+              Buy Now
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );
