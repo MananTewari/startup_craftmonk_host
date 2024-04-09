@@ -418,20 +418,77 @@ header {
 }
 .items-container {
     width:80%;
-    margin:40px;
+   gap:20px;
     padding:20px;
 }
-/* Custom CSS for adding gap between grid items */
-.mb-4 {
-    margin-bottom: 20px; /* Add bottom margin to create vertical gap */
+.product-tile:hover {
+    transform: scale(1.5); /* Increase the scale on hover */
+    transition: transform 0.3s ease; /* Add smooth transition */
   }
   
-  @media (min-width: 992px) {
-    .row-cols-md-3 > .col-md-3 {
-      padding-right: 15px; /* Add right padding to create horizontal gap */
-      padding-left: 15px;
+/* Custom CSS for adding gap between grid items */
+.product-tile {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    gap:20px;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
     }
+  
+  .product-image-container {
+    width: 100%; /* Maintain 4:3 aspect ratio for the image */
+    position: relative;
   }
+  
+  .product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and crop if needed */
+  }
+  
+  .product-details {
+    padding: 10px;
+    display: flex;
+    flex-direction:column;
+    margin-bottom:50px;
+  }
+  
+  .product-title {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .product-company {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .product-price {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .product-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product-overlay button {
+    margin-top:0px;
+  }
+  
   
 .grid_head{
     font-family: "Great Vibes", cursive;
