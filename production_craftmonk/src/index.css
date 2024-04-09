@@ -39,15 +39,19 @@
     object-fit: cover; /* Maintain aspect ratio and cover the entire container */
 }
 
-.titleCarousel,
+
 .paragraphCarousel {
     font-size: 26px; /* Adjust font size */
     color: #333; /* Text color */
     margin-bottom: 10px;
+    font-family: "Great Vibes", cursive;
+    font-weight: 800;
+    font-style: normal;
+    padding:10px;
      /* Adjust spacing */
 }
 .titleCarousel{
-    font-size:40px;
+    font-size:60px;
 }
 
 .buttonCarousel {
@@ -380,9 +384,11 @@ header {
 
 .footer_container {
     padding: 30px 0px 40px 0px;
-    background: #FAFBFC;
+    background: #ffd35e;
     display: flex;
     justify-content: space-evenly;
+    margin-bottom:-50px;
+    margin-top:20%;
 }
 
 .footer_column {
@@ -407,12 +413,28 @@ header {
     color: #94969f;
     text-align: center;
     padding: 15px;
+    margin-top:0;
+    background-color: #ffd35e;
+}
+.uttarakhand{
+    background-image:url("../public/images/uk.webp");
+    background-size:cover;
 }
 .sort_container{
     display:flex;
-    justify-content: center;
+    justify-content:space-around;
     align-items:center;
 }
+.sort_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .grid_head_container {
+    flex: 1; /* Take remaining space */
+    text-align: center;
+  }
+  
 .dropdown{
     float:left;
 }
@@ -421,10 +443,8 @@ header {
    gap:20px;
     padding:20px;
 }
-.product-tile:hover {
-    transform: scale(1.5); /* Increase the scale on hover */
-    transition: transform 0.3s ease; /* Add smooth transition */
-  }
+
+  
   
 /* Custom CSS for adding gap between grid items */
 .product-tile {
@@ -435,10 +455,13 @@ header {
     overflow: hidden;
     position: relative;
     gap:20px;
+    padding:10px;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
     align-items:center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: box-shadow 0.3s
     }
   
   .product-image-container {
@@ -451,7 +474,11 @@ header {
     height: 100%;
     object-fit: cover; /* Maintain aspect ratio and crop if needed */
   }
+  .product-image:hover{
+    transform: scale(1.3); /* Increase the scale on hover */
+    transition: transform 0.3s ease; /* Add smooth transition */
   
+  }
   .product-details {
     padding: 10px;
     display: flex;

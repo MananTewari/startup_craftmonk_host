@@ -9,8 +9,8 @@ useEffect(()=>{
 },[])
 
   return (
-    <div>
-         <div data-aos="flip-right" data-aos-delay="1500">
+    <div className="uttarakhand">
+         <div data-aos="flip-right" data-aos-delay="2500">
       <div class="container py-4">
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
           <div class="container-fluid py-5">
@@ -26,9 +26,7 @@ useEffect(()=>{
               from intricately carved wooden sculptures to vibrant handwoven
               textiles.{" "}
             </p>
-            <button class="btn btn-primary btn-lg" type="button">
-              Explore
-            </button>
+           
           </div>
         </div>
 

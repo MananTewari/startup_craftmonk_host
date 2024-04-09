@@ -46,8 +46,10 @@ function SortingTable() {
           </li>
         </ul>
       </div>
-      <div className="grid_head">
+
+      <div className="grid_head_container">
         <h1 className="grid_head">All your culture, in one place.</h1>
+        <h2 className="grid_head mt-0">CraftMonk's exclusive</h2>
       </div>
     </div>
   );

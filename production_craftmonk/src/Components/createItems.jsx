@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { bagSliceActions } from "../store/bagSlice";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ItemsCreater({ item }) {
   const dispatch = useDispatch();
@@ -15,7 +17,14 @@ function ItemsCreater({ item }) {
     dispatch(bagSliceActions.deleteFromBag(item.id));
   };
 
+useEffect(()=>{
+  AOS.init();
+})
+
+
+
   return (
+   
     <div className="col-md-3 col-sm-6 mb-4">
       <div className="product-tile">
         <div className="product-image-container">
@@ -49,6 +58,7 @@ function ItemsCreater({ item }) {
         </div>
       </div>
     </div>
+  
   );
 }
 

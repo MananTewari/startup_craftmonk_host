@@ -7,7 +7,7 @@ const sData = [
     },
     {
       id: 2,
-      title: "50% Off For Your First Shopping",
+      title: "Right from the Hills",
       desc: "Serving Uttarakhand since 2022",
       cover: "images/banner3.jpg",
     },
