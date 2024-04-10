@@ -5,6 +5,7 @@ import bagSlice from "./bagSlice";
 import itemSlice from "./itemSlice";
 import fetchStatusSlice from "./fetchStatus";
 import authSlice from "./authSlice";
+import userSlice from "./userSlice";
 
 
 const rootReducer = combineReducers({
@@ -12,6 +13,7 @@ const rootReducer = combineReducers({
   fetchStatus:fetchStatusSlice.reducer,
   bag:bagSlice.reducer,
   auth:authSlice.reducer,
+  user:userSlice.reducer,
    // Here you must provide the reducer for fetchStatus
 });
 <itemSlice/>

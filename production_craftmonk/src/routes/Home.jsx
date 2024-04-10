@@ -9,13 +9,13 @@ import ItemCarousel from "../Components/itemsCarousel";
 import Uttarakhand from "../Components/Uttarakhand";
 
 function Home() {
-  // Get the authentication state from Redux store
-  const isAuthenticated = useSelector((store) => store.auth.isAuthenticated);
-  // Assuming you also have 'items' in your Redux store
+
+ 
+
   const items = useSelector((store) => store.items);
 
   // Render Home component if user is authenticated, otherwise render Login component
-  return isAuthenticated ? (
+  return  (
     <main>
       <div>
         <SlideCard/>
@@ -29,9 +29,7 @@ function Home() {
         </div>
       </div>
     </main>
-  ) : (
-    <Login />
-  );
+  )
 }
 
 export default Home;
