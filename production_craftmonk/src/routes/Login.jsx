@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { authSliceActions } from "../store/authSlice";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
@@ -87,6 +88,13 @@ function Login() {
             >
               <i className="fab fa-google"></i>LOGOUT
             </button>
+    <Link to="/register">
+            <button
+              className="btn btn-secondary btn-block btn-3d"
+            >
+              <i className="fab fa-google"></i>Register
+            </button>
+            </Link>
           </div>
         </div>
       </div>

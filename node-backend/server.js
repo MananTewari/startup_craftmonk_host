@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs');
 const cors = require('cors');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -9,46 +9,47 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json());
 app.use(cors());
 
-const userDataFilePath = 'D:/DESKTOP/Major Projects/startup_craftmonk_host/node-backend/user.json';
-
+// Read user data from the JSON file
 let users = [];
+const userDataFile = 'userData.json';
 
-if (fs.existsSync(userDataFilePath)) {
-  const userData = fs.readFileSync(userDataFilePath);
+try {
+  const userData = fs.readFileSync(userDataFile);
   users = JSON.parse(userData);
+} catch (err) {
+  console.error('Error reading user data:', err);
 }
 
-app.post('/register', (req, res) => {
-  try {
-    const { username, password, name, address, email } = req.body;
-
-    // Check if the username already exists
-    const existingUser = users.find(user => user.username === username);
-    if (existingUser) {
-      return res.status(400).json({ message: 'Username already exists' });
-    }
-
-    const newUser = { username, password, name, address, email };
-    users.push(newUser);
-
-    fs.writeFileSync(userDataFilePath, JSON.stringify(users, null, 2));
-    console.log('User data saved:', newUser); // Log successful save
-
-    res.status(200).json({ message: 'User registered successfully', user: newUser });
-  } catch (error) {
-    console.error('Error registering user:', error);
-    res.status(500).json({ message: 'Error registering user' });
+// Login route
+app.post('/login', (req, res) => {
+  const { username, password } = req.body;
+  console.log('Login request received for username:', username);
+  const user = users.find(u => u.username === username && u.password === password);
+  if (user) {
+    res.status(200).json({ message: 'Login successful', user });
+  } else {
+    res.status(401).json({ message: 'Invalid credentials' });
   }
 });
 
-
-app.get('/user/:userId', (req, res) => {
-  const { userId } = req.params;
-  const user = users.find(user => user.username === userId);
-  if (user) {
-    res.status(200).json({ user });
+// Registration route
+app.post('/register', (req, res) => {
+  const newUser = req.body;
+  console.log('Registration request received for username:', newUser.username);
+  const existingUser = users.find(u => u.username === newUser.username);
+  if (existingUser) {
+    res.status(400).json({ message: 'Username already exists' });
   } else {
-    res.status(404).json({ message: 'User not found' });
+    users.push(newUser);
+    fs.writeFile(userDataFile, JSON.stringify(users), err => {
+      if (err) {
+        console.error('Error writing user data:', err);
+        res.status(500).json({ message: 'Error registering user' });
+      } else {
+        console.log('User registered successfully:', newUser.username);
+        res.status(200).json({ message: 'User registered successfully' });
+      }
+    });
   }
 });
 

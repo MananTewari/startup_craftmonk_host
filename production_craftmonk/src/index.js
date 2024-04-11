@@ -10,8 +10,7 @@ import App from './App';
 import { Provider } from 'react-redux';
 import craftmonkStore from './store/indexmain';
 import Checkout from './Components/Checkout';
-import Register from './Components/Register';
-import UserProfile from './Components/UserProfile';
+import Registration from './Components/Registration';
 
 
 
@@ -24,8 +23,8 @@ const router = createBrowserRouter([
       { path: "/ShoppingBag", element: <ShoppingBag /> },
       { path: "/Login", element: <Login /> },
       { path: "/Checkout", element: <Checkout /> },
-      {path:"/register", element:<Register/>},
-      {path:"/UserProfile", element:<UserProfile/>}
+     {path:"/register", element:<Registration/>}
+
       ]
   },
 ]);
