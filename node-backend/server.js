@@ -1,3 +1,4 @@
+const { v4: uuidv4 } = require('uuid');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -10,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // Read user data from the JSON file
-let users = [];
+let users  = [];
 const userDataFile = 'userData.json';
 
 try {
@@ -34,7 +35,7 @@ app.post('/login', (req, res) => {
 
 // Registration route
 app.post('/register', (req, res) => {
-  const newUser = req.body;
+  const newUser = { id: uuidv4(), ...req.body };
   console.log('Registration request received for username:', newUser.username);
   const existingUser = users.find(u => u.username === newUser.username);
   if (existingUser) {
@@ -52,7 +53,6 @@ app.post('/register', (req, res) => {
     });
   }
 });
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

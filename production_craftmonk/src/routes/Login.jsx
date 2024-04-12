@@ -8,12 +8,11 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [loggedInUser, setLoggedInUser] = useState(null); // State to store logged-in user data
   const dispatch = useDispatch();
- 
-
 
   const handleLogin = async (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5000/login", {
         username,
@@ -21,84 +20,82 @@ function Login() {
       });
       console.log(response.data.message);
       dispatch(authSliceActions.login());
-      // Handle successful login, e.g., store user data in localStorage, redirect, etc.
-      // Here you can handle issuing a session-based token
+      setLoggedInUser(response.data.user); // Store logged-in user data
     } catch (error) {
       console.error("Login failed:", error.response.data.message);
-      setError(error.response.data.message); // Set the error message
+      setError(error.response.data.message);
     }
   };
 
-  const handleLogoutmain = (e) => {
-    e.preventDefault();
-    console.log("logout");
+  const handleLogout = () => {
+    // Handle logout action, clear logged-in user data
+    setLoggedInUser(null);
     dispatch(authSliceActions.logout());
   };
 
   return (
+    <div className="container">
+      <div className="row justify-content-center mt-5">
+        <div className="col-md-6">
+          <div className="card">
+            <div className="card-body">
+              <h2 className="card-title text-center">
+                {loggedInUser ? "User Profile" : "Login"}
+              </h2>
+              {loggedInUser ? (
+                // Render user profile if logged in
+                <div>
+                  <p>Username: {loggedInUser.username}</p>
+                  <h1>name:{loggedInUser.name}</h1>
+                  <h2>email:{loggedInUser.email}</h2>
+<h2>Phone Number:{loggedInUser.phoneNumber}</h2>
 
 
-    <>
-
-      <div className="login-container">
-        <div className="login-box">
-          <h2 className="login-header">Login</h2>
-          <form className="login-form" onSubmit={handleLogin}>
-            <div className="form-group">
-              <label htmlFor="username">Username</label>
-              <input
-                type="text"
-                placeholder="Username"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-              />
+                  
+                  {/* Render other user profile details */}
+                  <button className="btn btn-primary" onClick={handleLogout}>
+                    Logout
+                  </button>
+                </div>
+              ) : (
+                // Render login form if not logged in
+                <form onSubmit={handleLogin}>
+                  <div className="form-group">
+                    <label htmlFor="username">Username</label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      placeholder="Username"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      type="password"
+                      className="form-control"
+                      placeholder="Password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                    {error && <div className="text-danger">{error}</div>}
+                  </div>
+                  <button type="submit" className="btn btn-primary btn-block">
+                    Login
+                  </button>
+                  <Link to="/register">
+                  <button type="submit" className="btn btn-primary btn-block">
+                    Register
+                  </button>
+                  </Link>
+                </form>
+              )}
             </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              {error && <div style={{ color: "red" }}>{error}</div>}{" "}
-              {/* Display error message */}
-            </div>
-            <div className="form-check mb-3">
-              <input
-                type="checkbox"
-                id="remember"
-                className="form-check-input"
-              />
-              <label htmlFor="remember" className="form-check-label">
-                Remember me
-              </label>
-            </div>
-            <button
-              type="submit"
-              className="btn btn-primary btn-block btn-3d"
-            >
-              Login
-            </button>
-          </form>
-          <div className="login-options">
-            <button
-              className="btn btn-secondary btn-block btn-3d"
-              onClick={handleLogoutmain}
-            >
-              <i className="fab fa-google"></i>LOGOUT
-            </button>
-    <Link to="/register">
-            <button
-              className="btn btn-secondary btn-block btn-3d"
-            >
-              <i className="fab fa-google"></i>Register
-            </button>
-            </Link>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

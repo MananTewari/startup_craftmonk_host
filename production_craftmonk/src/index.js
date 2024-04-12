@@ -11,6 +11,7 @@ import { Provider } from 'react-redux';
 import craftmonkStore from './store/indexmain';
 import Checkout from './Components/Checkout';
 import Registration from './Components/Registration';
+import UserProfile from './Components/UserProfile';
 
 
 
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
       { path: "/ShoppingBag", element: <ShoppingBag /> },
       { path: "/Login", element: <Login /> },
       { path: "/Checkout", element: <Checkout /> },
-     {path:"/register", element:<Registration/>}
+     {path:"/register", element:<Registration/>},
+  {path:"/userprofie", element:<UserProfile/>}
 
       ]
   },
