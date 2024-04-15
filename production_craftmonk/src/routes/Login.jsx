@@ -28,6 +28,7 @@ function Login() {
       });
       console.log(response.data.message);
       dispatch(authSliceActions.login());
+  
       setLoggedInUser(response.data.user); // Store logged-in user data in state
       
       // Store logged-in user data in local storage
