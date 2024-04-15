@@ -14,8 +14,10 @@ import Registration from './Components/Registration';
 import UserProfile from './Components/UserProfile';
 
 
+import { createTheme } from '@mui/material/styles'; 
 
 
+const defaultTheme = createTheme(); 
 const router = createBrowserRouter([
   {
     path: "/", element: <App />,
@@ -25,7 +27,8 @@ const router = createBrowserRouter([
       { path: "/Login", element: <Login /> },
       { path: "/Checkout", element: <Checkout /> },
      {path:"/register", element:<Registration/>},
-  {path:"/userprofie", element:<UserProfile/>}
+  {path:"/userprofie", element:<UserProfile/>},
+ 
 
       ]
   },
@@ -34,8 +37,11 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={craftmonkStore}>
+   
     <RouterProvider router={router} />
+   
   </Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
