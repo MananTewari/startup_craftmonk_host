@@ -92,7 +92,7 @@ function Registration() {
                   <label htmlFor="profilePicture">Profile Picture:</label>
                   <input
                     type="text"
-                    className="form-c ontrol"
+                    className="form-control"
                     id="profilePicture"
                     value={profilePicture}
                     onChange={(e) => setProfilePicture(e.target.value)}

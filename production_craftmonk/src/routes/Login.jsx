@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { authSliceActions } from "../store/authSlice";
@@ -11,14 +11,6 @@ function Login() {
   const [loggedInUser, setLoggedInUser] = useState(null); // State to store logged-in user data
   const dispatch = useDispatch();
 
-  // Check for logged-in user data in local storage upon component mount
-  useEffect(() => {
-    const storedUser = localStorage.getItem("loggedInUser");
-    if (storedUser) {
-      setLoggedInUser(JSON.parse(storedUser));
-    }
-  }, []);
-
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -28,48 +20,39 @@ function Login() {
       });
       console.log(response.data.message);
       dispatch(authSliceActions.login());
-  
-      setLoggedInUser(response.data.user); // Store logged-in user data in state
-      
-      // Store logged-in user data in local storage
-      localStorage.setItem("loggedInUser", JSON.stringify(response.data.user));
+      setLoggedInUser(response.data.user); // Store logged-in user data
     } catch (error) {
       console.error("Login failed:", error.response.data.message);
       setError(error.response.data.message);
     }
   };
-  
+
   const handleLogout = () => {
     // Handle logout action, clear logged-in user data
     setLoggedInUser(null);
     dispatch(authSliceActions.logout());
-    
-    // Clear logged-in user data from local storage
-    localStorage.removeItem("loggedInUser");
   };
-  
 
   return (
-    <div className="container-fluid">
-      <div className="row justify-content-center">
+    <div className="container">
+      <div className="row justify-content-center mt-5">
         <div className="col-md-6">
           <div className="card">
             <div className="card-body">
-              <h2 className="card-title text-center mb-4">
+              <h2 className="card-title text-center">
                 {loggedInUser ? "User Profile" : "Login"}
               </h2>
               {loggedInUser ? (
                 // Render user profile if logged in
-                <div className="text-center">
-                  <img
-                    src={loggedInUser.profilePicture}
-                    alt="Profile"
-                    className="rounded-circle mb-3"
-                    style={{ width: "150px", height: "150px" }}
-                  />
-                  <h4 className="mb-3">{loggedInUser.name}</h4>
-                  <p>Email: {loggedInUser.email}</p>
-                  <p>Phone Number: {loggedInUser.phoneNumber}</p>
+                <div>
+                  <p>Username: {loggedInUser.username}</p>
+                  <h1>name:{loggedInUser.name}</h1>
+                  <h2>email:{loggedInUser.email}</h2>
+<h2>Phone Number:{loggedInUser.phoneNumber}</h2>
+
+
+                  
+                  {/* Render other user profile details */}
                   <button className="btn btn-primary" onClick={handleLogout}>
                     Logout
                   </button>
@@ -102,9 +85,9 @@ function Login() {
                     Login
                   </button>
                   <Link to="/register">
-                    <button type="button" className="btn btn-secondary btn-block mt-3">
-                      Register
-                    </button>
+                  <button type="submit" className="btn btn-primary btn-block">
+                    Register
+                  </button>
                   </Link>
                 </form>
               )}
