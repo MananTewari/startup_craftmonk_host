@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function Registration() {
+function CollapsibleRegistration() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -9,6 +9,7 @@ function Registration() {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [profilePicture, setProfilePicture] = useState("");
   const [error, setError] = useState("");
+  const [isOpen, setIsOpen] = useState(false); // State to manage the collapse/expand of the registration form
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -28,14 +29,33 @@ function Registration() {
     }
   };
 
+  // Function to handle closing the registration form
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    // Set a timer to open the registration form after 15 seconds if the user is not logged in
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 5000);
+    return () => clearTimeout(timer); // Clear the timer on component unmount
+  }, []);
+
   return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h2 className="card-title text-center">Registration</h2>
-              <form onSubmit={handleRegister}>
+    <div className="container_collapse">
+
+<div className="half-banner">
+  <h1>CraftMonk</h1>
+</div>
+
+      {isOpen && (
+        <div className="registration-form">
+          <div className="close-icon" onClick={handleClose}>X</div>
+          <h2 className="card-title text-center">Registration</h2>
+          <form onSubmit={handleRegister}>
+      
+<form onSubmit={handleRegister}>
                 <div className="form-group">
                   <label htmlFor="username">Username:</label>
                   <input
@@ -92,23 +112,25 @@ function Registration() {
                   <label htmlFor="profilePicture">Profile Picture:</label>
                   <input
                     type="text"
-                    className="form-c ontrol"
+                    className="form-control"
                     id="profilePicture"
                     value={profilePicture}
                     onChange={(e) => setProfilePicture(e.target.value)}
                   />
                 </div>
+                </form>
                 <button type="submit" className="btn btn-primary btn-block">
                   Register
                 </button>
-              </form>
-              {error && <div className="text-danger">{error}</div>}
-            </div>
-          </div>
+          </form>
+          {error && <div className="text-danger">{error}</div>}
         </div>
-      </div>
+      )}
     </div>
   );
 }
 
-export default Registration;
+export default CollapsibleRegistration;
+
+
+
