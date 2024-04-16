@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 function Registration() {
   const [username, setUsername] = useState("");
@@ -98,6 +100,11 @@ function Registration() {
                     onChange={(e) => setProfilePicture(e.target.value)}
                   />
                 </div>
+                <Link to="/otp">
+                 <button >Verify Number</button>
+                 </Link>
+                
+                 
                 <button type="submit" className="btn btn-primary btn-block">
                   Register
                 </button>

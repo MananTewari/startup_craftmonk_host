@@ -13,7 +13,7 @@ function FetchItemsStatus() {
     console.log("fetch called")
     const controller = new AbortController();
     const signal = controller.signal;
-
+  
     dispatch(FetchStatusAction.markFetchingStarted());
 
     fetch("http://localhost:8080/items", { signal })
@@ -24,6 +24,7 @@ function FetchItemsStatus() {
         console.log("items fetched", items);
         // Dispatch action to update Redux state with fetched items
         dispatch(itemAction.addInitialItems(items[0]));
+       
       })
       .catch((error) => {
         if (error.name === 'AbortError') {

@@ -27,7 +27,7 @@ const SlideCard = () => {
         <Slider {...settings}>
             {sData.map((value, index) => {
                 return (
-                    <div data-aos="flip-right" data-aos-delay="800" key={index}>
+                    <div data-aos="zoom-out-down" data-aos-delay="1200" key={index}>
                         <div className='half-half-banner box d_flex top carousel'>
                             <div data-aos="fade-in" data-aos-delay="1500" className='left'>
                                 <h1 className="titleCarousel">{value.title}</h1>

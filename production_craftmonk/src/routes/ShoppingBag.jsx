@@ -15,6 +15,7 @@ function ShoppingBag() {
   
   // Get the authentication state from Redux store
   const isAuthenticated = useSelector((store) => store.auth.isAuthenticated);
+  
   function handleClearCart (){
 dispatch(bagSliceActions.clearCart());
   }
