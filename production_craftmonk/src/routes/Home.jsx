@@ -23,6 +23,7 @@ function Home() {
   return (
     <main>
       <div>
+      
         <SlideCard />
         {/* Render the registration form if user is not authenticated */}
         {shouldRenderRegistration && <CollapsibleRegistration />} 

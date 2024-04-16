@@ -13,9 +13,10 @@ const ItemCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    slidesToShow: 6, // Show 5 items at once
-    slidesToScroll: 1,
+    slidesToShow: 5, // Show 5 items at once
+    slidesToScroll: 3,
     autoplay: true,
+    autoplaySpeed: 1000, 
     responsive: [
       {
         breakpoint: 768,

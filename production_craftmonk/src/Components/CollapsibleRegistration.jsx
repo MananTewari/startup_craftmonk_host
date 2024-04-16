@@ -59,7 +59,7 @@ function CollapsibleRegistration() {
       <div className="registration-container d-flex justify-content-between">
         <div className="image-container">
           <img
-            src="https://img.freepik.com/free-vector/super-black-friday-sale-banner-with-red-brush-stroke_1361-3072.jpg?w=900&t=st=1711518339~exp=1711518939~hmac=3b0f55aed9638a2a57d5dcead1bdf3e2d28a58da0c740449ffb146531ad88b8f"
+            src="https://i.pinimg.com/originals/34/b0/d5/34b0d5b16c64587f2bf8e340267adf59.jpg"
             alt="CraftMonk Image"
             className="img-fluid collapse_image"
           />

@@ -12,7 +12,7 @@ import craftmonkStore from './store/indexmain';
 import Checkout from './Components/Checkout';
 import Registration from './Components/Registration';
 import UserProfile from './Components/UserProfile';
-
+import OTP from "./Components/OTP"
 
 import { createTheme } from '@mui/material/styles'; 
 
@@ -28,6 +28,7 @@ const router = createBrowserRouter([
       { path: "/Checkout", element: <Checkout /> },
      {path:"/register", element:<Registration/>},
   {path:"/userprofie", element:<UserProfile/>},
+  {path:"/otp", element:<OTP/>}
  
 
       ]
