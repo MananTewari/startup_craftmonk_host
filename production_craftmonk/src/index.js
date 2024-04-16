@@ -14,7 +14,9 @@ import Registration from './Components/Registration';
 import UserProfile from './Components/UserProfile';
 
 
+
 import { createTheme } from '@mui/material/styles'; 
+import Studio from './Components/Studio';
 
 
 const defaultTheme = createTheme(); 
@@ -28,6 +30,7 @@ const router = createBrowserRouter([
       { path: "/Checkout", element: <Checkout /> },
      {path:"/register", element:<Registration/>},
   {path:"/userprofie", element:<UserProfile/>},
+  {path:"/studio", element:<Studio/>},
  
 
       ]

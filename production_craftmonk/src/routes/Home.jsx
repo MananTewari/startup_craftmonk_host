@@ -6,6 +6,7 @@ import SlideCard from "../Components/Slider";
 import ItemCarousel from "../Components/itemsCarousel";
 import Uttarakhand from "../Components/Uttarakhand";
 import CollapsibleRegistration from "../Components/CollapsibleRegistration";
+import Categories from "../Components/Categories";
 
 function Home() {
   const items = useSelector((store) => store.items);
@@ -23,6 +24,8 @@ function Home() {
   return (
     <main>
       <div>
+
+        <Categories/>
         <SlideCard />
         {/* Render the registration form if user is not authenticated */}
         {shouldRenderRegistration && <CollapsibleRegistration />} 
