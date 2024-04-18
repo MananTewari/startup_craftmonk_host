@@ -1,24 +1,21 @@
-import React from "react";
-import { useSelector, useState } from "react-redux";
-
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import ItemsCreater from "../Components/createItems";
-
+import CollapsibleRegistration from "../Components/CollapsibleRegistration"; // Corrected import statement
 import SortingTable from "../Components/SoringTable";
 import SlideCard from "../Components/Slider";
 import ItemCarousel from "../Components/itemsCarousel";
-
+import LoadingState from "../Components/LoadingState";
 
 function Home() {
-
- 
-
   const items = useSelector((store) => store.items);
   const fetchStatus = useSelector((store) => store.fetchStatus);
   const isAuthenticated = useSelector((store) => store.auth.isAuthenticated); // Get authentication state
   const [shouldRenderRegistration, setShouldRenderRegistration] = useState(false);
   const [loading, setLoading] = useState(false); // State for loading indicator
   const [fetched, setFetched] = useState(false);
-  const [timeKeeper, settimeKeeper]=useState(true);
+  const [timeKeeper, settimeKeeper] = useState(true);
+
   useEffect(() => {
     // Check if the user has previously logged in
     const storedUser = localStorage.getItem("loggedInUser");
@@ -35,7 +32,7 @@ function Home() {
       // Set loading to false after 5 seconds
       const timeoutId = setTimeout(() => {
         setLoading(false);
-      }, 12000); // 5000 milliseconds = 5 seconds
+      }, 12000); // 12000 milliseconds = 12 seconds
 
       // Clear the timeout to prevent memory leaks
       return () => clearTimeout(timeoutId);
@@ -51,23 +48,22 @@ function Home() {
       <div>
         <SlideCard />
         {/* Render the registration form if user is not authenticated */}
-        {shouldRenderRegistration && <CollapsibleRegistration />} 
+        {shouldRenderRegistration && <CollapsibleRegistration />}
        
         <SortingTable />
         <ItemCarousel />
         {timeKeeper ? (
- <LoadingState/>
-) : (
-  <div className="items-container">
-  {Object.values(items).map((item) => (
-    <ItemsCreater key={item.key} item={item} fetched={fetched}/>
-  ))}
-</div>
-)}
-
+          <LoadingState />
+        ) : (
+          <div className="items-container">
+            {Object.values(items).map((item) => (
+              <ItemsCreater key={item.key} item={item} fetched={fetched} />
+            ))}
+          </div>
+        )}
       </div>
     </main>
-  )
+  );
 }
 
 export default Home;
