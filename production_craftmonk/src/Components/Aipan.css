@@ -1,0 +1,98 @@
+.product-display {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffd35e; 
+  margin-bottom: -250px; /* Component background color */
+}
+
+.main-heading {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.description-para {
+  font-size: 18px;
+  color: #666;
+}
+
+.card_collection {
+  display: flex;
+  align-items: center;
+}
+
+.product-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card {
+  width: calc(90% - 10px); /* Adjust the width of the cards */
+  margin: 20px;
+  padding: 10px;
+  background-color: #fff; /* Card background color */
+  border-radius: 15px;
+  box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.2); /* Add a 3D shadow effect */
+  transform-style: preserve-3d; /* Enable 3D transformations */
+  transition: transform 0.5s ease;
+  margin-bottom: 50px; /* Smooth transition for the 3D effect */
+  display: flex; /* Ensure flexbox layout */
+}
+
+.product-card .product-content {
+  flex: 1; /* Take remaining space in the flex container */
+}
+
+.product-card .product-image {
+  width: 100%; /* Set image width to fill the container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 15px; /* Apply border radius */
+}
+
+.product-card .product-details {
+  padding: 0 20px; /* Add padding for spacing */
+}
+
+.product-card.left {
+  transform-origin: left center;
+  margin-right: auto; /* Pushes card to the left */
+  margin-bottom: 70px;
+}
+
+.product-card.right {
+  transform-origin: right center;
+  margin-left: auto; /* Pushes card to the right */
+}
+
+.descriptioncard {
+  margin-top: -100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.product-image {
+  width: 100%; /* Adjust width to fit container */
+  height: auto; /* Maintain aspect ratio */
+  position: relative; /* Ensure relative positioning for parallax effect */
+  transform: translateZ(0); /* Ensure hardware acceleration for smoother performance */
+}
+
+h1 {
+  font-family: "Great Vibes";
+  font-size: 20px;
+  color: black;
+}
+
+p {
+  font-size: 13px;
+  color: black;
+}

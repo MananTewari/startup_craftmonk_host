@@ -30,8 +30,8 @@ function checkClick(){
         <nav className="nav_bar">
          
           <Link to="#">Home & Living</Link>
-          <Link to="#">Regions</Link>
-          <Link to="#">
+          <Link to="/regions">Regions</Link>
+          <Link to="/studio">
             Studio <sup>New</sup>
           </Link>
         </nav>

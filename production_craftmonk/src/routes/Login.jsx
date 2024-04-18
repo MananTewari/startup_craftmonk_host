@@ -4,12 +4,21 @@ import { useDispatch } from "react-redux";
 import { authSliceActions } from "../store/authSlice";
 import { Link } from "react-router-dom";
 
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loggedInUser, setLoggedInUser] = useState(null); // State to store logged-in user data
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    // Set a timer to open the login form after 15 seconds if the user is not logged in
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 20);
+    return () => clearTimeout(timer); // Clear the timer on component unmount
+  }, []);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -27,75 +36,70 @@ function Login() {
     }
   };
 
-  const handleLogout = () => {
-    // Handle logout action, clear logged-in user data
-    setLoggedInUser(null);
-    dispatch(authSliceActions.logout());
+  // Function to handle closing the login form
+  const handleClose = () => {
+    setIsOpen(false);
+    console.log("closed From");
   };
 
-  return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-body">
-              <h2 className="card-title text-center">
-                {loggedInUser ? "User Profile" : "Login"}
-              </h2>
-              {loggedInUser ? (
-                // Render user profile if logged in
-                <div>
-                  <p>Username: {loggedInUser.username}</p>
-                  <h1>name:{loggedInUser.name}</h1>
-                  <h2>email:{loggedInUser.email}</h2>
-<h2>Phone Number:{loggedInUser.phoneNumber}</h2>
+  return 
+    
+      {isOpen && (
+        <div className="container-fluid d-flex justify-content-center align-items-center vh-100">
+          <div className="login-container d-flex justify-content-between">
+            <div className="image-container">
+              <img
+                src="https://i.pinimg.com/originals/34/b0/d5/34b0d5b16c64587f2bf8e340267adf59.jpg"
+                alt="CraftMonk Image"
+                className="img-fluid login-image" // Changed class name to 'login-image'
+              />
+            </div>
 
-
-                  
-                  {/* Render other user profile details */}
-                  <button className="btn btn-primary" onClick={handleLogout}>
-                    Logout
-                  </button>
+            <div className="login-form-container"> {/* Changed class name to 'login-form-container' */}
+              <div className="close-icon" onClick={handleClose}>
+                <h1>X</h1>
+              </div>
+              <h2 className="card-title text-center">Login</h2>
+              <form onSubmit={handleLogin}>
+                <div className="form-group">
+                  <label htmlFor="username">Username:</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="username"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                  />
                 </div>
-              ) : (
-                // Render login form if not logged in
-                <form onSubmit={handleLogin}>
-                  <div className="form-group">
-                    <label htmlFor="username">Username</label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      placeholder="Password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                    {error && <div className="text-danger">{error}</div>}
-                  </div>
-                  <button type="submit" className="btn btn-primary btn-block">
-                    Login
-                  </button>
-                  <Link to="/register">
-                  <button type="submit" className="btn btn-primary btn-block">
-                    Register
-                  </button>
-                  </Link>
-                </form>
-              )}
+                <div className="form-group">
+                  <label htmlFor="password">Password:</label>
+                  <input
+                    type="password"
+                    className="form-control"
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary btn-block">
+                  Login
+                </button>
+              </form>
+              <Link to="/register">
+               <button type="submit" className="btn btn-primary btn-block">
+                  Register
+                </button>
+               </Link> 
+              {error && <div className="text-danger">{error}</div>}
             </div>
           </div>
+        
         </div>
-      </div>
-    </div>
+        
+
+     
   );
 }
 

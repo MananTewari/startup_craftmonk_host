@@ -34,9 +34,7 @@ const ItemCarousel = () => {
 
   return (
     <>
-      <div className="containerhead">
-        <h1 class="text-body-emphasis hills">From the Hills</h1>
-      </div>
+      
 
       <Slider {...settings}>
         {items.map((item, index) => (
