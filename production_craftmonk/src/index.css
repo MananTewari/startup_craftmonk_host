@@ -28,23 +28,6 @@ body {
   width:100%;
   height:60vh;
 }
-.registration-container {
-  border: 1px solid black;
-  border-radius: 5px;
-  box-shadow: 100px 0 10px rgba(0, 0, 0, 0.2);
-  width: 90%;
-  height:90%;
-  background-color: white;
-  padding: 20px;
-  top:10%;
-  position:fixed;
-  z-index:999;
-  overflow:scroll;
-  bottom:-30%;
-}
-.container-fluid {
-  background-color: #f0f0f0;
-}
 
 .login-container {
   max-width: 600px;
@@ -66,6 +49,49 @@ body {
   display: block;
   margin: auto;
 }
+/* Custom CSS for CollapsibleRegistration component */
+
+/* Registration container */
+.registration-container {
+  background-color: #f8f9fa; /* Light gray background */
+  z-index:999;
+}
+
+/* Close icon */
+.close-icon {
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+}
+
+/* Registration card title */
+.registration-card-title {
+  color: #007bff; /* Blue color */
+}
+
+/* Registration form */
+.registration-form {
+  padding: 20px;
+}
+
+/* Form inputs */
+.form-group label {
+  font-weight: bold;
+}
+
+/* Profile image */
+.registration-image {
+  max-height: 300px; /* Adjust the height as needed */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Error message */
+.text-danger {
+  color: #dc3545; /* Red color */
+}
+
 
 .login-form-container {
   width: 50%; /* Reduced width */
@@ -89,39 +115,115 @@ body {
   color: #333;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color:#ffd35e;
 }
 
-.form-control {
+.slide-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.btn-primary {
-  width: 100%;
+  height: 100%;
 }
 
 .image-container {
-  flex: 1;
+  width: 60%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imageCarousel {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.text-container {
+  width: 40%;
   padding: 20px;
 }
-.logincontimage{
-  flex: 1;
-  padding: 60px;
-}
-.registration-form {
-  flex: 1;
-  padding:20px;
-  width: 100vh;
+
+
+
+.paragraphCarousel {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.close-icon {
+.buttonCarousel {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.buttonCarousel:hover {
+  background-color: #0056b3;
+}
+
+.form-control {
+  border: 1px solid #ced4da; /* Thin border */
+  border-radius: 5px;
+  padding: 4px; /* Reduced padding */
+  transition: all 0.3s; /* Smooth transition for animation */
+  font-size:12px;
+}
+
+.form-control:focus {
+  border-color: #80bdff; /* Highlight border color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Animated focus effect */
+}
+
+.registration-container {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.registration-image{
+  height:100vh;
+}
+.registration-form{
+  padding:40px;
+}
+
+.registration-container .registration-form {
+  animation: slideInFromLeft 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.banner-image {
+  width: calc(100% - 20px); /* Adjust the margin as per your requirement */
+  height: auto;
+  margin: 10px; /* Adjust the margin as per your requirement */
+  object-fit: cover;
+}
 
 
 
@@ -137,8 +239,9 @@ body {
 .hills{
     background-color:white;
     margin-top:50px;
-    margin-bottom:-60px;
+    margin-bottom:-10px;
     text-align:center;
+    font-size: 70px;
 }
 
 .left {
@@ -219,7 +322,7 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #b6b1b1;
-   
+   z-index:999;
    
     width:100%;
     
@@ -236,77 +339,7 @@ header {
     height:10rem;
     width:60rem;
 }
-.login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top:170px;
-  }
-  
-  .login-box {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .login-form label {
-    font-weight: bold;
-  }
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Arial', sans-serif; /* Use any desired font */
-  }
-  
-  .login-box {
-    width: 300px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .login-form label {
-    font-weight: bold;
-  }
-  
-  .login-form input[type="text"],
-  .login-form input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .login-form .form-check {
-    margin-bottom: 15px;
-  }
-  
+
   .btn {
     transition: all 0.3s ease-in-out;
   }
@@ -473,7 +506,7 @@ header {
     text-transform: uppercase;
     text-decoration: none;
     padding: 28px 10px;
-    border-bottom: 5px solid #ffffff;
+
     flex-direction: column;
 
 }
@@ -618,23 +651,12 @@ header {
     background-color:	rgba(147,11,51,255);
     text-align:center;
     color:white;
-    position:fixed;
+   
     z-index:999;
+    width:100%;
+   
 
   }
-  a{
-    text-decoration:none;
-    color: inherit;
-  }
-  .banner-image {
-    width: calc(100% - 20px); /* Adjust the margin as per your requirement */
-    height: auto;
-    margin: 10px; /* Adjust the margin as per your requirement */
-    object-fit: cover;
-  }
-.text-center{
-  text-align:center;
-}  
   .aipan{
     color:white;
     font-size:20px;
@@ -692,6 +714,8 @@ header {
     font-weight: 400;
     font-style: normal;
     padding:10px;
+    font-size:60px;
+    margin-top:50px;
 }
 
 .item-container {
@@ -702,13 +726,16 @@ header {
 
 .item-image {
     width: 100%;
+    
 }
 
 .rating {
     font-size: 12px;
     font-weight: 700;
 }
-
+.card-title{
+  font-family: Arial, Helvetica, sans-serif;
+}
 .company-name {
     margin-top: 15px;
     font-size: 16px;

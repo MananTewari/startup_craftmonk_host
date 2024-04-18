@@ -49,7 +49,6 @@ function Home() {
         <SlideCard />
         {/* Render the registration form if user is not authenticated */}
         {shouldRenderRegistration && <CollapsibleRegistration />}
-       
         <SortingTable />
         <ItemCarousel />
         {timeKeeper ? (

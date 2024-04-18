@@ -5,7 +5,7 @@ import AOS from "aos";
 import Uttarakhand from "./Uttarakhand";
 import AipanDesc from "./AipanDesc";
 
-function ProductDisplay() {
+function Aipan() {
   const productRef = useRef(null);
   useEffect(() => {
     AOS.init({
@@ -228,4 +228,4 @@ function ProductDisplay() {
   );
 }
 
-export default ProductDisplay;
+export default Aipan;
