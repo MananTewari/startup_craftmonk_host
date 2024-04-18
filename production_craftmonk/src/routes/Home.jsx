@@ -1,34 +1,18 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import Banners from "../Components/Banners";
+import { useSelector, useState } from "react-redux";
+
 import ItemsCreater from "../Components/createItems";
-import Login from "./Login";
+
 import SortingTable from "../Components/SoringTable";
 import SlideCard from "../Components/Slider";
 import ItemCarousel from "../Components/itemsCarousel";
-import Uttarakhand from "../Components/Uttarakhand";
+
 
 function Home() {
 
  
 
   const items = useSelector((store) => store.items);
-<<<<<<< Updated upstream
-
-  // Render Home component if user is authenticated, otherwise render Login component
-  return  (
-    <main>
-      <div>
-        <SlideCard/>
-        <ItemCarousel/>
-        <Uttarakhand/>
-        <SortingTable/>
-        <div className="items-container">
-          {Object.values(items).map((item) => (
-            <ItemsCreater key={item.key} item={item} />
-          ))}
-        </div>
-=======
   const fetchStatus = useSelector((store) => store.fetchStatus);
   const isAuthenticated = useSelector((store) => store.auth.isAuthenticated); // Get authentication state
   const [shouldRenderRegistration, setShouldRenderRegistration] = useState(false);
@@ -81,7 +65,6 @@ function Home() {
 </div>
 )}
 
->>>>>>> Stashed changes
       </div>
     </main>
   )

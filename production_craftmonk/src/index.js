@@ -12,15 +12,12 @@ import craftmonkStore from './store/indexmain';
 import Checkout from './Components/Checkout';
 import Registration from './Components/Registration';
 import UserProfile from './Components/UserProfile';
-<<<<<<< Updated upstream
-=======
 import OTP from "./Components/OTP"
 
 import { createTheme } from '@mui/material/styles'; 
 import Studio from './Components/Studio';
 import Uttarakhand from './Components/Uttarakhand';
 import Aipan from './Components/Aipan';
->>>>>>> Stashed changes
 
 
 
@@ -34,9 +31,6 @@ const router = createBrowserRouter([
       { path: "/Login", element: <Login /> },
       { path: "/Checkout", element: <Checkout /> },
      {path:"/register", element:<Registration/>},
-<<<<<<< Updated upstream
-  {path:"/userprofie", element:<UserProfile/>}
-=======
   {path:"/userprofie", element:<UserProfile/>},
   {path:"/otp", element:<OTP/>},
   {path:"/studio", element:<Studio/>},
@@ -44,7 +38,6 @@ const router = createBrowserRouter([
   {path:"/aipan", element:<Aipan/>}
 
  
->>>>>>> Stashed changes
 
       ]
   },
