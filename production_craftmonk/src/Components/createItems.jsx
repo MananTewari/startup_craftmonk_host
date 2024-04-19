@@ -58,12 +58,25 @@ function ItemsCreater({ item }) {
         </div>
       </div>
       <>
-              <input
-                type="number"
-                value={quantity}
-                onChange={handleQuantityChange}
-                min="1"
-              />
+      <input
+  type="number"
+  value={quantity}
+  onChange={handleQuantityChange}
+  min="1"
+  style={{
+    width: '50px', // Adjust width as needed
+    height: '30px', // Adjust height as needed
+    padding: '5px', // Adjust padding as needed
+    fontSize: '14px', // Adjust font size as needed
+    border: '1px solid #ccc', // Border color
+    borderRadius: '5px', // Border radius
+    boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)', // Box shadow
+    outline: 'none', // Remove outline
+    transition: 'all 0.3s ease', // Transition effect
+    // Additional styles can be added here
+  }}
+/>
+
               </>
     </div>
   );

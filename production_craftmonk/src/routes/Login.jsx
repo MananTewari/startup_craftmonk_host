@@ -8,6 +8,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const[message, setMessage]=useState('');
   const [loggedInUser, setLoggedInUser] = useState(null); // State to store logged-in user data
   const dispatch = useDispatch();
 
@@ -31,6 +32,7 @@ function Login() {
       
       // Dispatch the login action with the user data received from the backend
       dispatch(authSliceActions.login(response.data.user));
+setMessage(response.data.message);
 
       // Store logged-in user data in local storage
       localStorage.setItem("loggedInUser", JSON.stringify(response.data.user));
@@ -130,6 +132,7 @@ function Login() {
                   <button type="submit" className="btn btn-primary btn-block">
                     Login
                   </button>
+                  {message && <p>{message}</p>}
                   <Link
                     to="/register"
                     className="btn btn-secondary btn-block mt-3"
