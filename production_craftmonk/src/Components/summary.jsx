@@ -9,20 +9,31 @@ import { useEffect } from "react";
 const BagSummary = () => {
   
   const bagItemIds = useSelector((state) => state.bag);
+  console.log(bagItemIds);
   const items = useSelector((state) => state.items);
-  const finalItems = items.filter((item) => bagItemIds.includes(item.id));
+console.log(items);
+const bagItemIdsOnly = bagItemIds.map((item) => item.id);
+const finalItems = items.filter((item) => bagItemIdsOnly.includes(item.id));
 
+console.log(finalItems);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   const CONVENIENCE_FEES = 99;
-  let totalItem = bagItemIds.length;
+  let totalItem = bagItemIds.reduce((acc, curr) => acc + curr.quantity, 0);
   let totalMRP = 0;
   let totalDiscount = 0;
-
-  finalItems.forEach((bagItem) => {
-    totalMRP += bagItem.original_price;
-    totalDiscount += bagItem.original_price - bagItem.current_price;
+  
+  bagItemIds.forEach((bagItem) => {
+    const item = finalItems.find((item) => item.id === bagItem.id);
+    if (item) {
+      totalMRP += item.original_price * bagItem.quantity;
+      totalDiscount += (item.original_price - item.current_price) * bagItem.quantity;
+    }
   });
+  
+  // Calculate final payment
+  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+  
 
   function placeOrder() {
     console.log("place order clicked");
@@ -31,7 +42,7 @@ const BagSummary = () => {
 
   }
 
-  let finalPayment = totalMRP - totalDiscount + CONVENIENCE_FEES;
+
 
   return (
     <>

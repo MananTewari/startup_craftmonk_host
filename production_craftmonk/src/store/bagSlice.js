@@ -18,13 +18,7 @@ const bagSlice = createSlice({
       return state.filter(item => item.id !== itemId);
     },
     clearCart: () => [],
-    updateQuantity: (state, action) => {
-      const { id, quantity } = action.payload;
-      const itemToUpdate = state.find(item => item.id === id);
-      if (itemToUpdate) {
-        itemToUpdate.quantity = quantity;
-      }
-    }
+
   }
 });
 
