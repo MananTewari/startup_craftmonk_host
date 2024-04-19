@@ -95,7 +95,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                 src="https://www.dsource.in/sites/default/files/gallery/3952/3.jpg"
                 alt="Aipan 2"
@@ -113,7 +113,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/4.jpg"
                 alt="Aipan 2"
@@ -133,7 +133,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/6.jpg"
                 alt="Aipan 2"
@@ -153,7 +153,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/7.jpg"
                 alt="Aipan 2"
@@ -173,7 +173,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/8.jpg"
                 alt="Aipan 2"
@@ -192,7 +192,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/9.jpg"
                 alt="Aipan 2"
@@ -211,7 +211,7 @@ function Aipan() {
             </div>
           </div>
           <div data-aos="fade-up-right">
-            <div className="product-card right">
+            <div className="product-card right" data-aos-delay="200">
               <img
                src="https://www.dsource.in/sites/default/files/gallery/3952/12.jpg"
                 alt="Aipan 2"

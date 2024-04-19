@@ -54,21 +54,13 @@ function CollapsibleRegistration() {
   return (
     <>
       {isOpen && (
-        <div className="container-fluid position-fixed top-50 start-50 translate-middle z-999">
-          <div className="registration-container border rounded p-4">
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <img
-                  src="https://i.pinimg.com/originals/34/b0/d5/34b0d5b16c64587f2bf8e340267adf59.jpg"
-                  alt="CraftMonk Image"
-                  className="img-fluid collapse_image registration-image"
-                />
-              </div>
-              <div className="col-lg-6">
-                <div className="d-flex justify-content-end">
-                  <div className="close-icon" onClick={handleClose}>
-                    <h1>X</h1>
-                  </div>
+        <div className="registration-overlay">
+          <div className="registration-container">
+            <div className="registration-content">
+              
+              <div className="registration-form">
+                <div className="close-icon" onClick={handleClose}>
+                  <h1>X</h1>
                 </div>
                 <h2 className="registration-card-title text-center mb-4">
                   Registration
