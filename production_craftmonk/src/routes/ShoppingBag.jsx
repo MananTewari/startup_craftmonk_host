@@ -1,45 +1,50 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
+import { Link } from "react-router-dom";
 import BagItems from "../Components/bagItems";
+import EmptyCart from "../Components/Emptycart";
 import BagSummary from "../Components/summary";
-import Emptycart from "../Components/Emptycart";
-import Login from "./Login";
-import { bagSliceActions } from "../store/bagSlice";
+
 
 function ShoppingBag() {
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
   const bagItems = useSelector((state) => state.bag);
   const items = useSelector((state) => state.items);
-  const finalItems = items.filter((item) => bagItems.includes(item.id));
-  const length = bagItems.length;
-  console.log("HERE", typeof(finalItems))
-  
+  const bagItemIds = bagItems.map((item) => item.id);
+  const finalItems = items.filter((item) => bagItemIds.includes(item.id));
+
+  // Update finalItems to include quantity from bagItems
+  const finalItemsWithQuantity = finalItems.map((item) => ({
+    ...item,
+    quantity: bagItems.find((bagItem) => bagItem.id === item.id)?.quantity || 0,
+  }));
+
   // Get the authentication state from Redux store
   const isAuthenticated = useSelector((store) => store.auth.isAuthenticated);
-  function handleClearCart (){
-dispatch(bagSliceActions.clearCart());
-  }
-  
- 
+  console.log("login hai ki nahi", isAuthenticated);
 
-  return (
-    isAuthenticated ? (
-      bagItems.length === 0 ? (
-        <Emptycart />
-      ) : (
-        <div className="bag-page">
-          <div className="bag-item-container">
-            {finalItems.map((item) => (
-              <BagItems key={item.id} item={item} />
-            ))}
-          </div>
-          <BagSummary />
-          <button onClick={handleClearCart}>Clear Cart</button>
-        </div>
-      )
+  function handleClearCart() {
+    dispatch(bagSliceActions.clearCart());
+  }
+
+  return isAuthenticated ? (
+    bagItems.length === 0 ? (
+      <EmptyCart />
     ) : (
-      <Login />
+      <div className="bag-page">
+        <div className="bag-item-container">
+          {finalItemsWithQuantity.map((item) => (
+            <BagItems key={item.id} item={item} />
+          ))}
+        </div>
+        <BagSummary/>
+        <button onClick={handleClearCart}>Clear Cart</button>
+      </div>
     )
+  ) : (
+  <Link to="/login">
+    <button>Login</button>
+  </Link>
   );
 }
-//ad
-export default ShoppingBag;
+
+export default ShoppingBag;  

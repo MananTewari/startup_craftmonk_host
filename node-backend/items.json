@@ -14,7 +14,9 @@
       "rating": {
         "stars": 4.5,
         "count": 1400
-      }
+      },
+      "available":20
+      
     },
     {
       "id": "002",

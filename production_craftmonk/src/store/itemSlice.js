@@ -12,6 +12,13 @@ const itemSlice = createSlice({
     },
     sortItemsByHighPrice:(state, action)=>{
       state.sort((a,b)=>b.current_price-a.current_price);
+    },
+    updateQuantity: (state, action) => {
+      const { id, quantity } = action.payload;
+      const itemToUpdate = state.find((item) => item.id === id);
+      if (itemToUpdate) {
+        itemToUpdate.quantity = quantity;
+      }
     }
   },
 });
