@@ -21,7 +21,9 @@ function Registration() {
         phoneNumber,
         profilePicture
       });
-      alert(response.data.message);
+      alert(response.data.message); // Notify user that registration is successful
+      // Redirect user to OTP verification page
+      window.location.href = "/emailverification"; // Replace '/otp' with the actual path to your OTP verification page
     } catch (error) {
       console.error("Registration failed:", error.response.data.message);
       setError(error.response.data.message);
@@ -108,8 +110,9 @@ function Registration() {
             </button>
           </form>
           {error && <div className="text-danger">{error}</div>}
+          {/* Link to navigate to OTP verification page */}
           <div className="text-center mt-3">
-            <a href="/otp" className="btn btn-link">
+            <a href="/emailverification" className="btn btn-link">
               Go to OTP
             </a>
           </div>

@@ -18,6 +18,8 @@ import { createTheme } from '@mui/material/styles';
 import Studio from './Components/Studio';
 import Uttarakhand from './Components/Uttarakhand';
 import Aipan from './Components/Aipan';
+import IndiaMap from './Components/Indiamap';
+import OTPVerification from './Components/OTPregistration';
 
 
 
@@ -35,8 +37,9 @@ const router = createBrowserRouter([
   {path:"/otp", element:<OTP/>},
   {path:"/studio", element:<Studio/>},
   {path:"/regions", element:<Uttarakhand/>},
-  {path:"/aipan", element:<Aipan/>}
-
+  {path:"/aipan", element:<Aipan/>},
+  {path:"/map", element:<IndiaMap/>},
+  {path:"/emailverification", element:<OTPVerification/>},
  
 
       ]
