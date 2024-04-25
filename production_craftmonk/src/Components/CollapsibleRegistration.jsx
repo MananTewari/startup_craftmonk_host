@@ -20,6 +20,7 @@ function CollapsibleRegistration() {
   }, []);
 
   const handleRegister = async (e) => {
+    console.log("collapse reg called");
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5000/register", {
@@ -128,7 +129,7 @@ function CollapsibleRegistration() {
                       onChange={(e) => setProfilePicture(e.target.value)}
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary btn-block">
+                  <button type="submit" className="btn btn-primary btn-block" onClick={handleRegister}>
                     Register
                   </button>
                 </form>

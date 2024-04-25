@@ -21,19 +21,21 @@ function Login() {
   }, []);
 
   const handleLogin = async (e) => {
+    console.log("clicked");
     e.preventDefault();
     try {
+      console.log("Logging in with username:", username, "and password:", password);
       const response = await axios.post("http://localhost:5000/login", {
         username,
         password,
       });
-
-      console.log(response.data.message);
+  
+      console.log("Login response:", response);
       
       // Dispatch the login action with the user data received from the backend
       dispatch(authSliceActions.login(response.data.user));
-setMessage(response.data.message);
-
+      setMessage(response.data.message);
+  
       // Store logged-in user data in local storage
       localStorage.setItem("loggedInUser", JSON.stringify(response.data.user));
     } catch (error) {
@@ -41,6 +43,7 @@ setMessage(response.data.message);
       setError(error.response.data.message);
     }
   };
+  
 
   const handleLogout = () => {
     // Handle logout action, clear logged-in user data
@@ -109,7 +112,7 @@ setMessage(response.data.message);
                 </div>
               ) : (
                 // Render login form if not logged in
-                <form onSubmit={handleLogin}>
+                <form>
                   <div className="mb-3">
                     <input
                       type="text"
@@ -129,7 +132,7 @@ setMessage(response.data.message);
                     />
                     {error && <div className="text-danger">{error}</div>}
                   </div>
-                  <button type="submit" className="btn btn-primary btn-block">
+                  <button type="submit" className="btn btn-primary btn-block" onClick={handleLogin}>
                     Login
                   </button>
                   {message && <p>{message}</p>}

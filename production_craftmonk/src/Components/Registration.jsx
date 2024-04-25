@@ -11,6 +11,7 @@ function Registration() {
   const [error, setError] = useState("");
 
   const handleRegister = async (e) => {
+    console.log("register clcikced")
     e.preventDefault();
     try {
       const response = await axios.post("http://localhost:5000/register", {
