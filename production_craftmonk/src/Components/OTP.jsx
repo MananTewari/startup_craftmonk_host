@@ -64,6 +64,7 @@ function OTP() {
   }
 
   return (
+    <>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
       <div style={{ padding: '20px', borderRadius: '10px', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)', backgroundColor: '#fff', animation: 'fadeInUp 0.5s forwards' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '20px' }}>Register Phone Number</h2>
@@ -83,6 +84,11 @@ function OTP() {
         <h5 style={{ textAlign: 'center' }}>{verificationMessage}</h5>
       </div>
     </div>
+
+    <div>
+      <p>{OTP}</p>
+    </div>
+    </>
   );
 }
 

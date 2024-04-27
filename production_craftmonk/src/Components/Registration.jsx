@@ -113,7 +113,7 @@ function Registration() {
           {error && <div className="text-danger">{error}</div>}
           {/* Link to navigate to OTP verification page */}
           <div className="text-center mt-3">
-            <a href="/emailverification" className="btn btn-link">
+            <a href="/otp" className="btn btn-link">
               Go to OTP
             </a>
           </div>

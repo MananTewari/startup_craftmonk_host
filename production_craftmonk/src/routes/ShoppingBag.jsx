@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import BagItems from "../Components/bagItems";
 import EmptyCart from "../Components/Emptycart";
 import BagSummary from "../Components/summary";
+import { bagSliceActions } from "../store/bagSlice";
 
 
 function ShoppingBag() {
